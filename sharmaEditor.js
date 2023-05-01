@@ -7,7 +7,18 @@ const SHARMAEDITOR = {
         // text area styling
         let html = id.appendChild(ta);
     },
-    config:(function(){let name='sachin';return name})(), // object goes here which we required to set configuration of texteditor
+    // object goes here which we required to set configuration of texteditor
+    config:(function({}){
+        // object has been setuped here
+        const conf = {};
+        if(!conf.toolbar)
+        {
+            return 'toolbar not setup';
+        }
+        else{
+            return'toolbar setuped';
+        }
+    })(), 
     
 }
 
