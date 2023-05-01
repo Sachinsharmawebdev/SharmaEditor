@@ -14,6 +14,15 @@
     <script>
         // code to initialize sharmaEditor
         SHARMAEDITOR.create('editor');
+        const obj = {
+        toolbar:['bold','italic'],
+        styleframework:'bootstrap'
+        };
+        const res=SHARMAEDITOR.config({
+            toolbar:['bold','italic','underline'],
+            styleframework:'bootstrap'
+        });
+        console.log(res);
     </script>
 </body>
 </html>

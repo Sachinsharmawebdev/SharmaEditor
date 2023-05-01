@@ -1,3 +1,4 @@
+
 const SHARMAEDITOR = {
     create:(i)=>{
         let id = document.getElementById(i);
@@ -8,9 +9,13 @@ const SHARMAEDITOR = {
         let html = id.appendChild(ta);
     },
     // object goes here which we required to set configuration of texteditor
-    config:(function({}){
-        // object has been setuped here
-        const conf = {};
+    config:(obj)=>{
+        // validate user input in cofig file
+        if (typeof obj !== 'object' || Array.isArray(obj) || obj === null) {
+            throw new TypeError('Expected an object as the argument');
+        }
+        // object has been setuped below
+        const conf = obj;
         if(!conf.toolbar)
         {
             return 'toolbar not setup';
@@ -18,8 +23,5 @@ const SHARMAEDITOR = {
         else{
             return'toolbar setuped';
         }
-    })(), 
-    
+    } 
 }
-
-console.log(SHARMAEDITOR.config.editor);
