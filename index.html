@@ -13,7 +13,14 @@
     <script src="sharmaEditor.js"></script>
     <script>
         // code to initialize sharmaEditor
-        SHARMAEDITOR.create('editor');
+        const editor = new SHARMAEDITOR('editor');
+        editor.style({
+            editor:{
+                height : '100vh',
+                width : '100%',
+                border:'2px solid grey'
+            }
+        });
     </script>
 </body>
 </html>
