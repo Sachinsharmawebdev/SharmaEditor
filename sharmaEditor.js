@@ -1,27 +1,42 @@
+class SHARMAEDITOR {
+    constructor(textarea){
+        let textareaID = document.getElementById(textarea);
+        let editArea = document.createElement('div')
+        editArea.setAttribute('id', 'editfield');
+        editArea.setAttribute('contenteditable',true); //TO make edit area
+        textareaID.appendChild(editArea);
+    }
 
-const SHARMAEDITOR = {
-    create:(i)=>{
-        let id = document.getElementById(i);
-        let ta = document.createElement('textarea');
-        // set attribute to text area
-        ta.setAttribute('id', 'tid');
-        // text area styling
-        let html = id.appendChild(ta);
-    },
-    // object goes here which we required to set configuration of texteditor
-    config:(obj)=>{
-        // validate user input in cofig file
-        if (typeof obj !== 'object' || Array.isArray(obj) || obj === null) {
-            throw new TypeError('Expected an object as the argument');
-        }
-        // object has been setuped below
-        const conf = obj;
-        if(!conf.toolbar)
+    // set style on editor by using diffrent params as an object
+    style(obj){
+       const style = obj;
+       if(style.editor)
+       {
+            let editorobj = style.editor;
+            let textfield = document.getElementById('editfield');
+            this.setstyle(textfield,editorobj);
+            
+       }
+       else if(style.toolbar)
+       {
+
+       }
+       else if(style.tool)
+       {
+
+       }
+       else{
+        // set default style for editor
+       }
+    }
+    // set style of any function
+    setstyle(id,obj){
+        if(typeof obj === 'object')
         {
-            return 'toolbar not setup';
-        }
-        else{
-            return'toolbar setuped';
-        }
-    } 
+            Object.keys(obj).forEach((key) => {
+                id.style[key] = obj[key];
+            });
+        } 
+    }
 }
+
