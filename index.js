@@ -4,26 +4,19 @@ myeditor.config({
     styles:{
         editor:{
             height:'100%',
-            width:'100%',
-            backgroundColor:'red',
-            display:'block',
-            margin:'0 auto'
+            width:'100%'
         },
         toolbar:{
             height:'10vh',
             width:'90%',
-            backgroundColor:'white',
-            border:'2px solid grey',
-            display:'block',
-            margin:'0 auto'
+            'background-color':'#f8f8f8a8',
+            border:'1px solid grey'
         },
         textarea:{
             height:'70vh',
             width:'90%',
-            backgroundColor:'brown',
-            border:'2px solid grey',
-            display:'block',
-            margin:'0 auto'
+            'background-color':'#f1f1f1e6',
+            border:'1px solid grey'
         }
     },
     tools:{
