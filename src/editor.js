@@ -18,7 +18,7 @@ const SHARMAEDITOR = {
         details.create['page'] = document.createElement('div');
         details.create['page'].setAttribute('id', 'page');
         details.create['page'].setAttribute('contenteditable',true);
-
+        
         // page format selection
         // details.create['pageformat'] = document.createElement('div');
         // details.create['pageformat'].setAttribute('id', 'pageformat');
