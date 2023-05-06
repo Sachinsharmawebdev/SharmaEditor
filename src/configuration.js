@@ -42,6 +42,10 @@ const configuration = (data)=>{
             !obj.display ? obj['display'] = 'block':obj.display;
             !obj.margin ? obj['margin'] = '0 auto' : obj.margin;
             !obj['background-color'] ? obj['background-color'] = '#00000012' : obj['background-color'];
+            !obj['height'] ? obj['height'] = '6vh' : obj['height'] = '6vh';
+            !obj['text-align'] ? obj['text-align'] = 'center' : obj['text-align'] = 'center';
+            !obj['padding-top'] ? obj['padding-top'] = '8px' : obj['padding-top'] = '8px';
+            !obj['border-radius'] ? obj['border-radius'] = '5px' : obj['border-radius'] = '5px';
             setStyle(div,obj);
         }
         if(textarea)
@@ -52,6 +56,9 @@ const configuration = (data)=>{
             !obj.display ? obj['display'] = 'block':obj.display;
             !obj.margin ? obj['margin'] = '0 auto' : obj.margin;
             !obj['background-color'] ? obj['background-color'] = '#00000012' : obj['background-color'];
+            !obj['height'] ? obj['height'] = '100vh' : obj['height'] = '100vh';
+            !obj['border-radius'] ? obj['border-radius'] = '5px' : obj['border-radius'] = '5px';
+            !obj['overflow'] ? obj['overflow'] = 'auto' : obj['overflow'] = 'auto';
             setStyle(div,obj);
         }
         

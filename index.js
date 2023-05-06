@@ -10,10 +10,10 @@ myeditor.config({
             height:'10vh',
             width:'90%',
             'background-color':'#f8f8f8a8',
-            border:'1px solid grey'
+            border:'1px solid grey',
+            'border-radius':'5px'
         },
         textarea:{
-            height:'70vh',
             width:'90%',
             'background-color':'#f1f1f1e6',
             border:'1px solid grey'
