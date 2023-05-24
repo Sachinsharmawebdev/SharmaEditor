@@ -55,33 +55,29 @@ const page = function(data){
     toolbar.innerHTML = html;
 
 
+
     // page fomats respectively as per option selection of page formats
 
     let seldiv = document.getElementById('pgFormatsselection');
     let pagediv = data.page;
-    data['extraDetails']={
-        pgformats:'A0'
-    };
     // styling
     pagediv.focus();
-    pagediv.style.height = '100vh';
+    pagediv.style.height = '85vh';
     pagediv.style.width = '90%';
     pagediv.style.backgroundColor='#ffffff';
     pagediv.style.margin = '0 auto';
     pagediv.style.outline='none';
-    pagediv.style.padding='2px 2px 2px 2px';
-    console.log(pagediv.id);
+    pagediv.style.padding='2px';
+    pagediv.style.overflow='auto';
     // event set
     seldiv.addEventListener("change", function(){
         let newVal = seldiv.value;
-        DataSet(newVal);
+        DataSet(newVal);//value of pageformats
     })
     // function for setup the pageview
     function DataSet(newVal)
     {
-        data['extraDetails']={
-            pgformats:`${newVal}`
-        }
+        console.log(newVal);
     }
 }
 
