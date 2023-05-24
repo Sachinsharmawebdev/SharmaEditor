@@ -1,11 +1,11 @@
 // import all component 
-import bullets from "./component/bullet/bullets.js";
-import image from "./component/image/image.js";
-import link from "./component/link/link.js";
-import paragraph from "./component/paragraph/paragraph.js";
-import table from "./component/table/table.js";
-import text from "./component/text/text.js";
-import page from "./component/page/page.js";
+import bullets from "./component/bullets.js";
+import image from "./component/image.js";
+import link from "./component/link.js";
+import paragraph from "./component/paragraph.js";
+import table from "./component/table.js";
+import text from "./component/text.js";
+import page from "./component/page.js";
 
 // import controllers
 // import imageController from "./controller/imageController.js";
@@ -31,6 +31,7 @@ const configuration = (data)=>{
             let obj = data.config.styles.editor;
             !obj.display ? obj['display'] = 'block':obj.display;
             !obj.margin ? obj['margin'] = '0 auto' : obj.margin;
+            !obj['height'] ? obj['height'] = '85vh' : obj['height'] = '85vh';
             !obj['background-color'] ? obj['background-color'] = '' : obj['background-color'];
             setStyle(div,obj);
         }
@@ -56,7 +57,7 @@ const configuration = (data)=>{
             !obj.display ? obj['display'] = 'block':obj.display;
             !obj.margin ? obj['margin'] = '0 auto' : obj.margin;
             !obj['background-color'] ? obj['background-color'] = '#00000012' : obj['background-color'];
-            !obj['height'] ? obj['height'] = '100vh' : obj['height'] = '100vh';
+            !obj['height'] ? obj['height'] = '100%' : obj['height'] = '100%';
             !obj['border-radius'] ? obj['border-radius'] = '5px' : obj['border-radius'] = '5px';
             !obj['overflow'] ? obj['overflow'] = 'auto' : obj['overflow'] = 'auto';
             setStyle(div,obj);
