@@ -60,15 +60,29 @@ const page = function(data){
 
     let seldiv = document.getElementById('pgFormatsselection');
     let pagediv = data.page;
+<<<<<<< Updated upstream
     // styling
     pagediv.focus();
     pagediv.style.height = '85vh';
+=======
+    
+    // styling
+    pagediv.focus();
+    //pagediv.style.height = '100vh';
+>>>>>>> Stashed changes
     pagediv.style.width = '90%';
+    pagediv.style.height = '85vh';
     pagediv.style.backgroundColor='#ffffff';
     pagediv.style.margin = '0 auto';
     pagediv.style.outline='none';
+<<<<<<< Updated upstream
     pagediv.style.padding='2px';
     pagediv.style.overflow='auto';
+=======
+    pagediv.style.padding='2px 2px 2px 2px';
+    pagediv.style.overflow='auto';
+
+>>>>>>> Stashed changes
     // event set
     seldiv.addEventListener("change", function(){
         let newVal = seldiv.value;
