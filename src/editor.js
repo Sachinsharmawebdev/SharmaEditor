@@ -4,11 +4,11 @@ const SHARMAEDITOR = {
     create:(div)=>{
         details.create = {};
         // main div
-        details.create['editorID'] = document.getElementById(div);
+        details.create['maindiv'] = document.getElementById(div);
 
         // canvas element
-        details.create['editAreaID'] = document.createElement('div');
-        details.create['editAreaID'].setAttribute('id', 'editfield');
+        details.create['canvas'] = document.createElement('div');
+        details.create['canvas'].setAttribute('id', 'canvas');
 
         // toolbar area
         details.create['toolbar'] = document.createElement('div');
@@ -24,9 +24,9 @@ const SHARMAEDITOR = {
         // details.create['pageformat'].setAttribute('id', 'pageformat');
 
         // appending tag in to respective div 
-        details.create['editorID'].appendChild(details.create['toolbar']);
-        details.create['editorID'].appendChild(details.create['editAreaID']);
-        details.create['editAreaID'].appendChild(details.create['page']);
+        details.create['maindiv'].appendChild(details.create['toolbar']);
+        details.create['maindiv'].appendChild(details.create['canvas']);
+        details.create['canvas'].appendChild(details.create['page']);
         // details.create['toolbar'].appendChild(details.create['pageformat']);
     },
     config:(obj)=>{
