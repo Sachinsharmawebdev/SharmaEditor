@@ -27,7 +27,7 @@ const configuration = (data)=>{
         if(editor)
         {
             // editor styles
-            let div = data.create.maindiv;
+            let div = data.create.editorID;
             let obj = data.config.styles.editor;
             !obj.display ? obj['display'] = 'block':obj.display;
             !obj.margin ? obj['margin'] = '0 auto' : obj.margin;
@@ -52,15 +52,11 @@ const configuration = (data)=>{
         if(textarea)
         {
             // textarea style
-            let div = data.create.canvas;
+            let div = data.create.editAreaID;
             let obj = data.config.styles.textarea;
             !obj.display ? obj['display'] = 'block':obj.display;
             !obj.margin ? obj['margin'] = '0 auto' : obj.margin;
             !obj['background-color'] ? obj['background-color'] = '#00000012' : obj['background-color'];
-<<<<<<< Updated upstream
-=======
-            //!obj['height'] ? obj['height'] = '100%' : obj['height'] = '100%';
->>>>>>> Stashed changes
             !obj['border-radius'] ? obj['border-radius'] = '5px' : obj['border-radius'] = '5px';
             setStyle(div,obj);
         }
